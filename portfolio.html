@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Hami's Architectural Services</title>
+  <meta name="description" content="Browse our portfolio of spatial planning, architectural drawings, and stand optimisation projects across Johannesburg and surrounding areas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Portfolio-specific styles */
+    .portfolio-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.625rem;
+      margin-bottom: var(--space-2xl);
+    }
+    .filter-btn {
+      padding: 0.5rem 1.25rem;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--gray-mid);
+      border: 1.5px solid var(--gray-border);
+      cursor: pointer;
+      transition: all var(--transition-base);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+    .filter-btn.active {
+      border-color: var(--orange);
+      background: var(--orange);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Featured (wide) card */
+    .portfolio-card--wide {
+      grid-column: span 1;
+    }
+    @media (min-width: 640px) {
+      .portfolio-card--wide { grid-column: span 2; }
+    }
+    @media (min-width: 1024px) {
+      .portfolio-card--wide { grid-column: span 2; }
+    }
+    .portfolio-card--wide .portfolio-card__placeholder {
+      aspect-ratio: 16/7;
+    }
+    .portfolio-card--wide {
+      aspect-ratio: unset;
+    }
+
+    .portfolio-card__overlay { opacity: 0; }
+    .portfolio-card:hover .portfolio-card__overlay { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo" aria-label="Hami's Architectural Services — Home">
+        <img src="Logo.png" alt="" class="nav__logo-img" width="42" height="42" />
+        <div class="nav__logo-text">
+          Hami's
+          <span>Architectural Services</span>
+        </div>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"     class="nav__link">Home</a></li>
+        <li><a href="about.html"     class="nav__link">About</a></li>
+        <li><a href="services.html"  class="nav__link">Services</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="contact.html"   class="nav__link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary nav__cta">Get a Quote</a>
+      <button class="nav__hamburger" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════ MOBILE MENU ══════════════════════════════ -->
+<div class="nav__mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="nav__mobile-close" aria-label="Close navigation menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <ul role="list" style="display:flex;flex-direction:column;align-items:center;gap:2rem;">
+    <li><a href="index.html"     class="nav__mobile-link">Home</a></li>
+    <li><a href="about.html"     class="nav__mobile-link">About</a></li>
+    <li><a href="services.html"  class="nav__mobile-link">Services</a></li>
+    <li><a href="portfolio.html" class="nav__mobile-link">Portfolio</a></li>
+    <li><a href="contact.html"   class="nav__mobile-link">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn--primary" style="margin-top:2.5rem;">Get a Quote</a>
+</div>
+
+<!-- ═══════════════════════════════ MAIN ════════════════════════════════ -->
+<main>
+
+  <!-- ── PAGE HERO ──────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="page-hero__breadcrumb-sep" aria-hidden="true">/</span>
+        <span aria-current="page">Portfolio</span>
+      </nav>
+      <span class="section-label">Our Work</span>
+      <h1 class="page-hero__title">Projects that speak<br />for themselves.</h1>
+      <p class="page-hero__subtitle">
+        A showcase of spatial planning, architectural drawings, and stand optimisation work delivered across Johannesburg and the surrounding regions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO GRID ─────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filters -->
+      <div class="portfolio-filters fade-in" role="group" aria-label="Filter projects">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="spatial">Spatial Planning</button>
+        <button class="filter-btn" data-filter="drawings">Architectural Drawings</button>
+        <button class="filter-btn" data-filter="optimisation">Stand Optimisation</button>
+        <button class="filter-btn" data-filter="custom">Custom Design</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="portfolio-grid">
+
+        <!-- 01 Featured wide card -->
+        <article class="portfolio-card portfolio-card--wide fade-in" data-category="custom">
+          <img
+            src="Images/brian-road-residence-n260413-10pan.jpg"
+            alt="Luxury residence with pool and open-plan entertainment area, lit at dusk"
+            class="portfolio-card__image"
+            loading="lazy"
+            style="aspect-ratio:16/7;width:100%;min-height:260px;"
+          />
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__category">Custom Design</span>
+            <h3 class="portfolio-card__title">Luxury Residence with Entertainment Pavilion</h3>
+          </div>
+        </article>
+
+        <!-- 02 -->
+        <article class="portfolio-card fade-in fade-in-delay-1" data-category="drawings">
+          <img
+            src="Images/Aluminium-Windows-Pivot-Door.-House-Tshepo-Molete-600x403.jpeg"
+            alt="Contemporary double-storey home with aluminium windows and pivot door"
+            class="portfolio-card__image"
+            loading="lazy"
+          />
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__category">Architectural Drawings</span>
+            <h3 class="portfolio-card__title">Contemporary Home — Johannesburg North</h3>
+          </div>
+        </article>
+
+        <!-- 03 -->
+        <article class="portfolio-card fade-in fade-in-delay-2" data-category="spatial">
+          <img
+            src="Images/Modern-3-Bedroom-House-Plans-with-Photos_Archid.jpg"
+            alt="Modern 3-bedroom family home with bold geometric façade"
+            class="portfolio-card__image"
+            loading="lazy"
+          />
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__category">Spatial Planning</span>
+            <h3 class="portfolio-card__title">3-Bedroom Family Home — Pretoria</h3>
+          </div>
+        </article>
+
+        <!-- 04 -->
+        <article class="portfolio-card fade-in fade-in-delay-1" data-category="optimisation">
+          <img
+            src="Images/WhatsApp%20Image%202026-04-15%20at%2011.23.05%20AM.jpeg"
+            alt="Multi-unit residential complex on an optimised stand"
+            class="portfolio-card__image"
+            loading="lazy"
+          />
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__category">Stand Optimisation</span>
+            <h3 class="portfolio-card__title">Multi-Unit Complex — Sandton</h3>
+          </div>
+        </article>
+
+        <!-- 05 -->
+        <article class="portfolio-card fade-in fade-in-delay-2" data-category="custom">
+          <img
+            src="Images/WhatsApp%20Image%202026-04-15%20at%2011.23.04%20AM.jpeg"
+            alt="Open-plan interior with exposed timber roof and glass walls"
+            class="portfolio-card__image"
+            loading="lazy"
+          />
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__category">Custom Design</span>
+            <h3 class="portfolio-card__title">Open-Plan Residence — Interior Design</h3>
+          </div>
+        </article>
+
+        <!-- 06 -->
+        <article class="portfolio-card fade-in fade-in-delay-3" data-category="drawings">
+          <img
+            src="Images/Modern-Tuscan-House-Plans-South-Africa-Three-Bedroom-House-Designs-Archid-22.jpg"
+            alt="Modern Tuscan-style residence with striking cantilevered volumes"
+            class="portfolio-card__image"
+            loading="lazy"
+          />
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__category">Architectural Drawings</span>
+            <h3 class="portfolio-card__title">Modern Tuscan Residence — Centurion</h3>
+          </div>
+        </article>
+
+        <!-- 07 -->
+        <article class="portfolio-card fade-in" data-category="spatial">
+          <img
+            src="Images/themaak-new-clinic-desmond-tutu-hiv-foundation-cape-town-south-africa-500-1.jpg"
+            alt="Commercial building with louvred façade and bold yellow accent"
+            class="portfolio-card__image"
+            loading="lazy"
+          />
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__category">Spatial Planning</span>
+            <h3 class="portfolio-card__title">Commercial Development — Cape Town</h3>
+          </div>
+        </article>
+
+        <!-- 08 -->
+        <article class="portfolio-card fade-in fade-in-delay-1" data-category="custom">
+          <img
+            src="Images/WhatsApp%20Image%202026-04-15%20at%2011.23.04%20AM%20(2).jpeg"
+            alt="Boutique commercial kiosk with dark brick and industrial detailing"
+            class="portfolio-card__image"
+            loading="lazy"
+          />
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__category">Custom Design</span>
+            <h3 class="portfolio-card__title">Boutique Commercial Kiosk — Johannesburg</h3>
+          </div>
+        </article>
+
+        <!-- 09 -->
+        <article class="portfolio-card fade-in fade-in-delay-2" data-category="optimisation">
+          <img
+            src="Images/WhatsApp%20Image%202026-04-15%20at%2011.23.04%20AM%20(1).jpeg"
+            alt="Aerial view of a completed residential stand with pool and landscaping"
+            class="portfolio-card__image"
+            loading="lazy"
+          />
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__category">Stand Optimisation</span>
+            <h3 class="portfolio-card__title">Aerial Site View — Residential Stand</h3>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BANNER ────────────────────────────────────────── -->
+  <section class="cta-banner fade-in">
+    <div class="container">
+      <span class="section-label">Your Project Next</span>
+      <h2>Want to see your stand<br />in our portfolio?</h2>
+      <p>We'd love to hear about your project. Reach out and let's start designing something great.</p>
+      <a href="contact.html" class="btn btn--primary">Start Your Project</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <img src="Logo.png" alt="Hami's Architectural Services" class="footer__logo-img" width="46" height="46" />
+        <p class="footer__name">Hami's Architectural Services</p>
+        <p class="footer__tagline">Spatial planning and architectural drawings designed to fit your stand efficiently and intelligently.</p>
+      </div>
+      <div>
+        <p class="footer__heading">Navigation</p>
+        <ul class="footer__links" role="list">
+          <li><a href="index.html"     class="footer__link">Home</a></li>
+          <li><a href="about.html"     class="footer__link">About</a></li>
+          <li><a href="services.html"  class="footer__link">Services</a></li>
+          <li><a href="portfolio.html" class="footer__link">Portfolio</a></li>
+          <li><a href="contact.html"   class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Get In Touch</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>info@hamisarchitectural.co.za</span>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>+27 XX XXX XXXX</span>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>Johannesburg, South Africa</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span class="footer__year">2025</span> Hami's Architectural Services. All rights reserved.</span>
+      <span>Designed with precision.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════ WHATSAPP FLOAT ═══════════════════════ -->
+<a href="https://wa.me/27XXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Hami%27s%20Architectural%20Services."
+   class="wa-float"
+   data-tooltip="Chat on WhatsApp"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="js/main.js"></script>
+<script>
+  /* Portfolio filter */
+  (function () {
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var cards      = document.querySelectorAll('.portfolio-card[data-category]');
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = this.dataset.filter;
+
+        filterBtns.forEach(function (b) { b.classList.remove('active'); });
+        this.classList.add('active');
+
+        cards.forEach(function (card) {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>

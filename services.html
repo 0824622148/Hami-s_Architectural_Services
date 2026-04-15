@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Hami's Architectural Services</title>
+  <meta name="description" content="Explore our services: spatial planning, architectural drawings, stand optimisation, and custom design solutions for residential and commercial projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo" aria-label="Hami's Architectural Services — Home">
+        <img src="Logo.png" alt="" class="nav__logo-img" width="42" height="42" />
+        <div class="nav__logo-text">
+          Hami's
+          <span>Architectural Services</span>
+        </div>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"     class="nav__link">Home</a></li>
+        <li><a href="about.html"     class="nav__link">About</a></li>
+        <li><a href="services.html"  class="nav__link">Services</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="contact.html"   class="nav__link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary nav__cta">Get a Quote</a>
+      <button class="nav__hamburger" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════ MOBILE MENU ══════════════════════════════ -->
+<div class="nav__mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="nav__mobile-close" aria-label="Close navigation menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <ul role="list" style="display:flex;flex-direction:column;align-items:center;gap:2rem;">
+    <li><a href="index.html"     class="nav__mobile-link">Home</a></li>
+    <li><a href="about.html"     class="nav__mobile-link">About</a></li>
+    <li><a href="services.html"  class="nav__mobile-link">Services</a></li>
+    <li><a href="portfolio.html" class="nav__mobile-link">Portfolio</a></li>
+    <li><a href="contact.html"   class="nav__mobile-link">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn--primary" style="margin-top:2.5rem;">Get a Quote</a>
+</div>
+
+<!-- ═══════════════════════════════ MAIN ════════════════════════════════ -->
+<main>
+
+  <!-- ── PAGE HERO ──────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="page-hero__breadcrumb-sep" aria-hidden="true">/</span>
+        <span aria-current="page">Services</span>
+      </nav>
+      <span class="section-label">What We Offer</span>
+      <h1 class="page-hero__title">Architectural services<br />built for precision.</h1>
+      <p class="page-hero__subtitle">
+        From spatial analysis to submission-ready drawings — we deliver every service with technical rigour and a commitment to making your stand work at its best.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── SERVICES DETAIL ────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+
+      <!-- 01 Spatial Planning -->
+      <div class="service-detail" id="spatial-planning">
+        <div class="service-detail__content fade-in">
+          <div class="service-detail__number">01</div>
+          <h2 class="service-detail__title">Spatial Planning</h2>
+          <p class="service-detail__desc">
+            Effective spatial planning is the foundation of any successful build. We analyse your stand's shape, orientation, slope, access points, and zoning restrictions to create a layout that works intelligently — maximising usable area and natural flow.
+          </p>
+          <ul class="service-detail__features">
+            <li class="service-detail__feature">Detailed site analysis and orientation study</li>
+            <li class="service-detail__feature">Zoning &amp; setback compliance review</li>
+            <li class="service-detail__feature">Optimal footprint positioning</li>
+            <li class="service-detail__feature">Access, parking &amp; circulation planning</li>
+            <li class="service-detail__feature">Floor area ratio maximisation</li>
+          </ul>
+          <a href="contact.html" class="btn btn--primary">Request This Service</a>
+        </div>
+        <div class="service-detail__visual fade-in fade-in-delay-2" style="overflow:hidden;">
+          <img
+            src="Images/WhatsApp%20Image%202026-04-15%20at%2011.23.04%20AM%20(1).jpeg"
+            alt="Aerial view demonstrating spatial planning layout"
+            loading="lazy"
+          />
+          <div class="visual__corner-mark"></div>
+        </div>
+      </div>
+
+      <!-- 02 Architectural Drawings -->
+      <div class="service-detail service-detail--reverse" id="architectural-drawings">
+        <div class="service-detail__content fade-in">
+          <div class="service-detail__number">02</div>
+          <h2 class="service-detail__title">Architectural Drawings</h2>
+          <p class="service-detail__desc">
+            Our architectural drawings are produced to the highest technical standard — clear, accurate, and ready for municipal submission. We produce the full set of drawings required for council approval and construction.
+          </p>
+          <ul class="service-detail__features">
+            <li class="service-detail__feature">Site plans and location drawings</li>
+            <li class="service-detail__feature">Floor plans (all levels)</li>
+            <li class="service-detail__feature">Elevations — all four façades</li>
+            <li class="service-detail__feature">Sections and roof plans</li>
+            <li class="service-detail__feature">Council submission packages</li>
+          </ul>
+          <a href="contact.html" class="btn btn--primary">Request This Service</a>
+        </div>
+        <div class="service-detail__visual fade-in fade-in-delay-2" style="overflow:hidden;">
+          <img
+            src="Images/Modern-3-Bedroom-House-Plans-with-Photos_Archid.jpg"
+            alt="Modern residential architectural design — 3-bedroom home"
+            loading="lazy"
+          />
+          <div class="visual__corner-mark"></div>
+        </div>
+      </div>
+
+      <!-- 03 Stand Optimisation -->
+      <div class="service-detail" id="stand-optimization">
+        <div class="service-detail__content fade-in">
+          <div class="service-detail__number">03</div>
+          <h2 class="service-detail__title">Stand Optimisation</h2>
+          <p class="service-detail__desc">
+            Not every stand is a perfect rectangle. Irregular shapes, corner plots, and challenging topographies require creative thinking. We specialise in extracting maximum value from any stand configuration.
+          </p>
+          <ul class="service-detail__features">
+            <li class="service-detail__feature">Corner and irregular plot analysis</li>
+            <li class="service-detail__feature">Boundary setback maximisation</li>
+            <li class="service-detail__feature">Split and subdivision planning</li>
+            <li class="service-detail__feature">Slope and level difference solutions</li>
+            <li class="service-detail__feature">Coverage &amp; bulk calculations</li>
+          </ul>
+          <a href="contact.html" class="btn btn--primary">Request This Service</a>
+        </div>
+        <div class="service-detail__visual fade-in fade-in-delay-2" style="overflow:hidden;">
+          <img
+            src="Images/Aluminium-Windows-Pivot-Door.-House-Tshepo-Molete-600x403.jpeg"
+            alt="Contemporary residence — stand optimisation result"
+            loading="lazy"
+          />
+          <div class="visual__corner-mark"></div>
+        </div>
+      </div>
+
+      <!-- 04 Custom Design Solutions -->
+      <div class="service-detail service-detail--reverse" id="custom-design">
+        <div class="service-detail__content fade-in">
+          <div class="service-detail__number">04</div>
+          <h2 class="service-detail__title">Custom Design Solutions</h2>
+          <p class="service-detail__desc">
+            Sometimes a project calls for something beyond the standard. We offer bespoke architectural design tailored entirely to your brief — bringing together your lifestyle requirements, aesthetic preferences, and budget into a coherent, buildable design.
+          </p>
+          <ul class="service-detail__features">
+            <li class="service-detail__feature">Client brief development &amp; consultation</li>
+            <li class="service-detail__feature">Concept design exploration</li>
+            <li class="service-detail__feature">3D visualisation support</li>
+            <li class="service-detail__feature">Material and specification guidance</li>
+            <li class="service-detail__feature">Design-to-documentation coordination</li>
+          </ul>
+          <a href="contact.html" class="btn btn--primary">Request This Service</a>
+        </div>
+        <div class="service-detail__visual fade-in fade-in-delay-2" style="overflow:hidden;">
+          <img
+            src="Images/WhatsApp%20Image%202026-04-15%20at%2011.23.04%20AM.jpeg"
+            alt="Open-plan interior — custom design solution"
+            loading="lazy"
+          />
+          <div class="visual__corner-mark"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROCESS ────────────────────────────────────────────── -->
+  <div class="process">
+    <div class="container">
+      <div class="section-header section-header--center fade-in">
+        <span class="section-label">How We Work</span>
+        <h2>Our Process</h2>
+        <div class="divider divider--center"></div>
+        <p style="max-width:480px;margin:0.75rem auto 0;">A clear, collaborative process from first contact to final drawings.</p>
+      </div>
+
+      <div class="process__steps">
+        <div class="process__step fade-in fade-in-delay-1">
+          <div class="process__step-number">01</div>
+          <h3 class="process__step-title">Consultation</h3>
+          <p class="process__step-desc">We discuss your stand, your vision, and your requirements. We ask the right questions to fully understand what you need.</p>
+        </div>
+        <div class="process__step fade-in fade-in-delay-2">
+          <div class="process__step-number">02</div>
+          <h3 class="process__step-title">Site Analysis</h3>
+          <p class="process__step-desc">We analyse the stand — its dimensions, orientation, topography, and applicable zoning regulations.</p>
+        </div>
+        <div class="process__step fade-in fade-in-delay-3">
+          <div class="process__step-number">03</div>
+          <h3 class="process__step-title">Design &amp; Drawing</h3>
+          <p class="process__step-desc">We produce the spatial plan and full architectural drawing set, iterating with you until the design is exactly right.</p>
+        </div>
+        <div class="process__step fade-in fade-in-delay-4">
+          <div class="process__step-number">04</div>
+          <h3 class="process__step-title">Delivery</h3>
+          <p class="process__step-desc">You receive submission-ready drawings in the required formats — along with our full support through the approval process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CTA BANNER ────────────────────────────────────────── -->
+  <section class="cta-banner fade-in">
+    <div class="container">
+      <span class="section-label">Get Started</span>
+      <h2>Ready to discuss<br />your project?</h2>
+      <p>Whether you have detailed plans or just an idea, we're here to help you move forward with confidence.</p>
+      <a href="contact.html" class="btn btn--primary">Contact Us Today</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <img src="Logo.png" alt="Hami's Architectural Services" class="footer__logo-img" width="46" height="46" />
+        <p class="footer__name">Hami's Architectural Services</p>
+        <p class="footer__tagline">Spatial planning and architectural drawings designed to fit your stand efficiently and intelligently.</p>
+      </div>
+      <div>
+        <p class="footer__heading">Navigation</p>
+        <ul class="footer__links" role="list">
+          <li><a href="index.html"     class="footer__link">Home</a></li>
+          <li><a href="about.html"     class="footer__link">About</a></li>
+          <li><a href="services.html"  class="footer__link">Services</a></li>
+          <li><a href="portfolio.html" class="footer__link">Portfolio</a></li>
+          <li><a href="contact.html"   class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Get In Touch</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>info@hamisarchitectural.co.za</span>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>+27 XX XXX XXXX</span>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>Johannesburg, South Africa</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span class="footer__year">2025</span> Hami's Architectural Services. All rights reserved.</span>
+      <span>Designed with precision.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════ WHATSAPP FLOAT ═══════════════════════ -->
+<a href="https://wa.me/27XXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Hami%27s%20Architectural%20Services."
+   class="wa-float"
+   data-tooltip="Chat on WhatsApp"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

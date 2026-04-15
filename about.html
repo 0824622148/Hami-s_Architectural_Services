@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Hami's Architectural Services</title>
+  <meta name="description" content="Learn about Hami's Architectural Services — our story, mission, vision, and expertise in spatial planning and architectural design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo" aria-label="Hami's Architectural Services — Home">
+        <img src="Logo.png" alt="" class="nav__logo-img" width="42" height="42" />
+        <div class="nav__logo-text">
+          Hami's
+          <span>Architectural Services</span>
+        </div>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"     class="nav__link">Home</a></li>
+        <li><a href="about.html"     class="nav__link">About</a></li>
+        <li><a href="services.html"  class="nav__link">Services</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="contact.html"   class="nav__link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary nav__cta">Get a Quote</a>
+      <button class="nav__hamburger" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════ MOBILE MENU ══════════════════════════════ -->
+<div class="nav__mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="nav__mobile-close" aria-label="Close navigation menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <ul role="list" style="display:flex;flex-direction:column;align-items:center;gap:2rem;">
+    <li><a href="index.html"     class="nav__mobile-link">Home</a></li>
+    <li><a href="about.html"     class="nav__mobile-link">About</a></li>
+    <li><a href="services.html"  class="nav__mobile-link">Services</a></li>
+    <li><a href="portfolio.html" class="nav__mobile-link">Portfolio</a></li>
+    <li><a href="contact.html"   class="nav__mobile-link">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn--primary" style="margin-top:2.5rem;">Get a Quote</a>
+</div>
+
+<!-- ═══════════════════════════════ MAIN ════════════════════════════════ -->
+<main>
+
+  <!-- ── PAGE HERO ──────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="page-hero__breadcrumb-sep" aria-hidden="true">/</span>
+        <span aria-current="page">About</span>
+      </nav>
+      <span class="section-label">Our Story</span>
+      <h1 class="page-hero__title">Built on precision.<br />Driven by purpose.</h1>
+      <p class="page-hero__subtitle">
+        We are a dedicated architectural practice focused on intelligent spatial design — creating plans that work harder, smarter, and better for every stand.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── OUR STORY ──────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="fade-in">
+          <span class="section-label">Our Background</span>
+          <h2>A practice founded on intelligent design</h2>
+          <div class="divider"></div>
+          <p>Hami's Architectural Services was established with a singular focus: to deliver architectural drawings and spatial plans that truly fit each stand. Too many designs waste space or ignore the natural character of a property — we built our practice to change that.</p>
+          <p style="margin-top:1rem;">Over the years we have worked across residential and light commercial projects throughout Johannesburg and the surrounding regions, building a reputation for technical accuracy, regulatory compliance, and creative spatial problem-solving.</p>
+          <p style="margin-top:1rem;">Every project — regardless of size — receives the same level of dedication. We believe that the quality of a design is felt long after the drawing is submitted.</p>
+          <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem;">
+            <a href="services.html" class="btn btn--primary">Our Services</a>
+            <a href="contact.html"  class="btn btn--outline-dark">Talk to Us</a>
+          </div>
+        </div>
+        <div class="fade-in fade-in-delay-2">
+          <div class="story-visual">
+            <img
+              src="Images/WhatsApp%20Image%202026-04-15%20at%2011.23.04%20AM%20(1).jpeg"
+              alt="Aerial view of a completed residential stand design"
+              class="story-visual__photo"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MISSION & VISION ───────────────────────────────────── -->
+  <section class="section section--gray" id="mission-vision">
+    <div class="container">
+      <div class="section-header section-header--center fade-in">
+        <span class="section-label">What Drives Us</span>
+        <h2>Mission &amp; Vision</h2>
+        <div class="divider divider--center"></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="mv-card mv-card--light fade-in">
+          <p class="mv-card__label">Our Mission</p>
+          <h3 class="mv-card__title">To make every square metre count</h3>
+          <p class="mv-card__text">
+            Our mission is to deliver spatial planning and architectural drawings that are precise, compliant, and perfectly suited to each unique stand. We work closely with our clients to understand their needs — and then design solutions that exceed expectations.
+          </p>
+          <p class="mv-card__text" style="margin-top:1rem;">
+            We believe good architecture is accessible. Clear communication, transparent process, and thoughtful design are the pillars of every engagement.
+          </p>
+        </div>
+        <div class="mv-card mv-card--dark fade-in fade-in-delay-2">
+          <p class="mv-card__label">Our Vision</p>
+          <h3 class="mv-card__title">Setting the standard for spatial precision</h3>
+          <p class="mv-card__text">
+            We envision a practice known as the go-to partner for anyone who wants their stand designed with intelligence and care. A firm where precision is the baseline — not a bonus.
+          </p>
+          <p class="mv-card__text" style="margin-top:1rem;">
+            As the built environment grows more complex, we continue to invest in our knowledge, tools, and relationships to stay at the forefront of architectural best practice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERTISE ──────────────────────────────────────────── -->
+  <section class="section" id="expertise">
+    <div class="container">
+      <div class="section-header fade-in" style="max-width:680px;">
+        <span class="section-label">What We're Good At</span>
+        <h2>Our areas of expertise</h2>
+        <div class="divider"></div>
+        <p>We have refined our skills across a focused set of disciplines to deliver consistently excellent results for our clients.</p>
+      </div>
+
+      <div class="expertise-tags fade-in">
+        <span class="expertise-tag">Spatial Planning</span>
+        <span class="expertise-tag">Architectural Drawings</span>
+        <span class="expertise-tag">Stand Optimisation</span>
+        <span class="expertise-tag">Custom Design</span>
+        <span class="expertise-tag">Council Submissions</span>
+        <span class="expertise-tag">Site Analysis</span>
+        <span class="expertise-tag">Residential Design</span>
+        <span class="expertise-tag">Boundary Planning</span>
+      </div>
+
+      <div class="grid-3 fade-in">
+        <div style="padding:var(--space-xl) var(--space-lg);border:1px solid var(--gray-border);border-top:3px solid var(--orange);">
+          <h4 style="margin-bottom:var(--space-sm);">Technical Accuracy</h4>
+          <p style="font-size:0.9rem;color:var(--gray-mid);">Every drawing is produced to exact dimensional standards — ready for municipal submission and contractor use.</p>
+        </div>
+        <div style="padding:var(--space-xl) var(--space-lg);border:1px solid var(--gray-border);border-top:3px solid var(--orange);">
+          <h4 style="margin-bottom:var(--space-sm);">Regulatory Knowledge</h4>
+          <p style="font-size:0.9rem;color:var(--gray-mid);">Deep familiarity with local building codes, zoning requirements, and council approval processes.</p>
+        </div>
+        <div style="padding:var(--space-xl) var(--space-lg);border:1px solid var(--gray-border);border-top:3px solid var(--orange);">
+          <h4 style="margin-bottom:var(--space-sm);">Client-Centred Process</h4>
+          <p style="font-size:0.9rem;color:var(--gray-mid);">We keep you informed at every stage — no surprises, no jargon. Just clear, professional communication.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BANNER ────────────────────────────────────────── -->
+  <section class="cta-banner fade-in">
+    <div class="container">
+      <span class="section-label">Ready to Start?</span>
+      <h2>Let's bring your vision<br />to life.</h2>
+      <p>Tell us about your stand and your goals. We'll design a solution that fits — precisely.</p>
+      <a href="contact.html" class="btn btn--primary">Start Your Project</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <img src="Logo.png" alt="Hami's Architectural Services" class="footer__logo-img" width="46" height="46" />
+        <p class="footer__name">Hami's Architectural Services</p>
+        <p class="footer__tagline">Spatial planning and architectural drawings designed to fit your stand efficiently and intelligently.</p>
+      </div>
+      <div>
+        <p class="footer__heading">Navigation</p>
+        <ul class="footer__links" role="list">
+          <li><a href="index.html"     class="footer__link">Home</a></li>
+          <li><a href="about.html"     class="footer__link">About</a></li>
+          <li><a href="services.html"  class="footer__link">Services</a></li>
+          <li><a href="portfolio.html" class="footer__link">Portfolio</a></li>
+          <li><a href="contact.html"   class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Get In Touch</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>info@hamisarchitectural.co.za</span>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>+27 XX XXX XXXX</span>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>Johannesburg, South Africa</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span class="footer__year">2025</span> Hami's Architectural Services. All rights reserved.</span>
+      <span>Designed with precision.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════ WHATSAPP FLOAT ═══════════════════════ -->
+<a href="https://wa.me/27XXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Hami%27s%20Architectural%20Services."
+   class="wa-float"
+   data-tooltip="Chat on WhatsApp"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

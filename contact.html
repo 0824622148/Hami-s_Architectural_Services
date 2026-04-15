@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Hami's Architectural Services</title>
+  <meta name="description" content="Get in touch with Hami's Architectural Services. Request a quote, ask a question, or discuss your architectural project with us." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo" aria-label="Hami's Architectural Services — Home">
+        <img src="Logo.png" alt="" class="nav__logo-img" width="42" height="42" />
+        <div class="nav__logo-text">
+          Hami's
+          <span>Architectural Services</span>
+        </div>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"     class="nav__link">Home</a></li>
+        <li><a href="about.html"     class="nav__link">About</a></li>
+        <li><a href="services.html"  class="nav__link">Services</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="contact.html"   class="nav__link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary nav__cta">Get a Quote</a>
+      <button class="nav__hamburger" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════ MOBILE MENU ══════════════════════════════ -->
+<div class="nav__mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="nav__mobile-close" aria-label="Close navigation menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <ul role="list" style="display:flex;flex-direction:column;align-items:center;gap:2rem;">
+    <li><a href="index.html"     class="nav__mobile-link">Home</a></li>
+    <li><a href="about.html"     class="nav__mobile-link">About</a></li>
+    <li><a href="services.html"  class="nav__mobile-link">Services</a></li>
+    <li><a href="portfolio.html" class="nav__mobile-link">Portfolio</a></li>
+    <li><a href="contact.html"   class="nav__mobile-link">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn--primary" style="margin-top:2.5rem;">Get a Quote</a>
+</div>
+
+<!-- ═══════════════════════════════ MAIN ════════════════════════════════ -->
+<main>
+
+  <!-- ── PAGE HERO ──────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="page-hero__breadcrumb-sep" aria-hidden="true">/</span>
+        <span aria-current="page">Contact</span>
+      </nav>
+      <span class="section-label">Get In Touch</span>
+      <h1 class="page-hero__title">Let's start designing<br />your space.</h1>
+      <p class="page-hero__subtitle">
+        Tell us about your stand, your timeline, and your vision. We respond to every enquiry personally and promptly.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── CONTACT MAIN ───────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- ── FORM ──────────────────────────────────────────── -->
+        <div class="fade-in">
+          <span class="section-label">Send Us a Message</span>
+          <h2 style="margin-bottom:var(--space-md);">Request a Quote</h2>
+          <div class="divider" style="margin-top:0;"></div>
+          <p style="margin-bottom:var(--space-xl);">Fill in the form below and we'll get back to you within one business day.</p>
+
+          <!--
+            FORMSPREE SETUP:
+            1. Go to https://formspree.io and create a free account
+            2. Create a new form and copy your form ID
+            3. Replace YOUR_FORM_ID below with your actual form ID
+            Example: action="https://formspree.io/f/abcd1234"
+          -->
+          <form
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            class="contact-form"
+            novalidate
+          >
+            <!-- Hidden fields for Formspree -->
+            <input type="hidden" name="_subject" value="New Enquiry — Hami's Architectural Services" />
+            <input type="text"   name="_gotcha"  style="display:none" tabindex="-1" autocomplete="off" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name <span style="color:var(--orange)">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Your full name"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span style="color:var(--orange)">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="your@email.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-input"
+                  placeholder="+27 XX XXX XXXX"
+                  autocomplete="tel"
+                />
+              </div>
+              <div class="form-group">
+                <label for="service" class="form-label">Service Required <span style="color:var(--orange)">*</span></label>
+                <select id="service" name="service" class="form-select" required>
+                  <option value="" disabled selected>Select a service…</option>
+                  <option value="Spatial Planning">Spatial Planning</option>
+                  <option value="Architectural Drawings">Architectural Drawings</option>
+                  <option value="Stand Optimisation">Stand Optimisation</option>
+                  <option value="Custom Design Solutions">Custom Design Solutions</option>
+                  <option value="General Enquiry">General Enquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="stand" class="form-label">Stand / Property Details</label>
+              <input
+                type="text"
+                id="stand"
+                name="stand_details"
+                class="form-input"
+                placeholder="e.g. 500m² corner stand, Fourways — residential build"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message <span style="color:var(--orange)">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-textarea"
+                placeholder="Describe your project, requirements, or any questions you have…"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%;padding:1rem;">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <path d="M2 8h12M8 2l6 6-6 6"/>
+              </svg>
+            </button>
+          </form>
+
+          <!-- Success message shown after Formspree redirect -->
+          <div class="form-success" role="alert">
+            <strong>Message sent!</strong> Thank you for reaching out. We'll be in touch within one business day.
+          </div>
+        </div>
+
+        <!-- ── CONTACT INFO ───────────────────────────────────── -->
+        <div class="fade-in fade-in-delay-2">
+          <div class="contact-info">
+            <h3 class="contact-info__heading">Contact Details</h3>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div>
+                <p class="contact-info__label">Email</p>
+                <a href="mailto:info@hamisarchitectural.co.za" class="contact-info__value" style="text-decoration:underline;text-decoration-color:rgba(212,118,30,0.4);">
+                  info@hamisarchitectural.co.za
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div>
+                <p class="contact-info__label">Phone</p>
+                <a href="tel:+27XXXXXXXXX" class="contact-info__value">+27 XX XXX XXXX</a>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <div>
+                <p class="contact-info__label">Service Area</p>
+                <p class="contact-info__value">Johannesburg &amp; surrounding regions<br />Gauteng, South Africa</p>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+              </div>
+              <div>
+                <p class="contact-info__label">Response Time</p>
+                <p class="contact-info__value">Within 1 business day</p>
+              </div>
+            </div>
+
+            <!-- WhatsApp CTA -->
+            <!--
+              Replace the href below with your actual WhatsApp number.
+              Format: https://wa.me/27XXXXXXXXX (country code without +)
+              Example: https://wa.me/27821234567
+            -->
+            <a href="https://wa.me/27XXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Hami%27s%20Architectural%20Services."
+               class="btn btn--whatsapp"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Chat with us on WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICE AREA NOTE ──────────────────────────────────── -->
+  <section class="section section--gray">
+    <div class="container">
+      <div style="max-width:680px;margin-inline:auto;text-align:center;" class="fade-in">
+        <span class="section-label">Where We Operate</span>
+        <h2>Serving Johannesburg<br />&amp; surrounding regions</h2>
+        <div class="divider divider--center"></div>
+        <p>We work with clients across Johannesburg, Pretoria, Midrand, Centurion, Sandton, Fourways, Randburg, Roodepoort, and surrounding Gauteng areas. Not sure if we cover your area? Get in touch and we'll let you know.</p>
+        <div style="margin-top:var(--space-xl);display:flex;justify-content:center;flex-wrap:wrap;gap:0.75rem;">
+          <span class="expertise-tag">Johannesburg</span>
+          <span class="expertise-tag">Pretoria</span>
+          <span class="expertise-tag">Sandton</span>
+          <span class="expertise-tag">Midrand</span>
+          <span class="expertise-tag">Centurion</span>
+          <span class="expertise-tag">Fourways</span>
+          <span class="expertise-tag">Randburg</span>
+          <span class="expertise-tag">Roodepoort</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <img src="Logo.png" alt="Hami's Architectural Services" class="footer__logo-img" width="46" height="46" />
+        <p class="footer__name">Hami's Architectural Services</p>
+        <p class="footer__tagline">Spatial planning and architectural drawings designed to fit your stand efficiently and intelligently.</p>
+      </div>
+      <div>
+        <p class="footer__heading">Navigation</p>
+        <ul class="footer__links" role="list">
+          <li><a href="index.html"     class="footer__link">Home</a></li>
+          <li><a href="about.html"     class="footer__link">About</a></li>
+          <li><a href="services.html"  class="footer__link">Services</a></li>
+          <li><a href="portfolio.html" class="footer__link">Portfolio</a></li>
+          <li><a href="contact.html"   class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Get In Touch</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>info@hamisarchitectural.co.za</span>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>+27 XX XXX XXXX</span>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>Johannesburg, South Africa</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span class="footer__year">2025</span> Hami's Architectural Services. All rights reserved.</span>
+      <span>Designed with precision.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════ WHATSAPP FLOAT ═══════════════════════ -->
+<a href="https://wa.me/27XXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Hami%27s%20Architectural%20Services."
+   class="wa-float"
+   data-tooltip="Chat on WhatsApp"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
